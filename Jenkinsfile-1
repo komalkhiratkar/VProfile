@@ -1,0 +1,11 @@
+
+ pipeline {
+    agent any
+       stages {
+         stage ("ansible-playbook-run"){
+            steps {
+               ansiblePlaybook credentialsId: 'ansible-ubuntu', disableHostKeyChecking: true, playbook: 'sample-playbook.yml', vaultTmpPath: ''
+   }
+  } 
+ }
+}
