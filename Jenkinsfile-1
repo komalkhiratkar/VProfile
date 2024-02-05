@@ -26,7 +26,7 @@
         }
          stage ("ansible-playbook-run"){
             steps {
-               ansiblePlaybook credentialsId: 'ansible-ubuntu', disableHostKeyChecking: true, playbook: 'sample-playbook.yml', vaultTmpPath: ''
+               ansiblePlaybook credentialsId: 'ansible-ubuntu', disableHostKeyChecking: true, playbook: 'tomcat-playbook.yml', sudoUser: 'ansadm', vaultTmpPath: ''
    }
   }
  }
