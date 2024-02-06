@@ -46,6 +46,7 @@
        copy:
          src:  /home/ansadm/vprofile/target/vprofile-v1.war
          dest: /home/ansadm/apache-tomcat-8.5.98/webapps
+         remote_src: yes  
 
      - name: start tomcat
        shell: nohup /home/ansadm/apache-tomcat-8.5.98/bin/startup.sh &
