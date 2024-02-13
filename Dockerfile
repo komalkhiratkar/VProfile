@@ -12,7 +12,7 @@ EXPOSE 8080
 
 WORKDIR /apache-tomcat-8.5.98/
 
-COPY target/vprofile-v1.war /apache-tomcat-8.5.98/webapps/
+#COPY target/vprofile-v1.war /apache-tomcat-8.5.98/webapps/
 
 ENTRYPOINT ["/apache-tomcat-8.5.98/bin/catalina.sh", "run"]
 
