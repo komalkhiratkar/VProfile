@@ -2,7 +2,14 @@
  - hosts: ubuntu
    become: yes
    tasks:
-     - name: install tree package
+     - name: install docker.io
        apt:
-         name: tree
-         state: present  
+         name: docker.io
+         state: present 
+
+     - name: pull docker image
+      shell:  sudo docker pull komal921
+
+     - name: run docker image
+      shell: sudo docker run -itd komal921
+
