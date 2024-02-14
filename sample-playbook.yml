@@ -8,8 +8,8 @@
          state: present 
 
      - name: pull docker image
-       shell:  sudo docker pull komal921
+       shell:  sudo docker pull komal921/docker-test:10
 
      - name: run docker image
-       shell: sudo docker run -itd komal921
+       shell: sudo docker run -itd komal921/docker-test:10
 
