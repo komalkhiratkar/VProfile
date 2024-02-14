@@ -46,11 +46,8 @@ pipeline {
     }
    stage ('install docker and pull image') {
      steps{
-       script { 
-            withDockerRegistry(credentialsId: 'docc-credentials') {
-            sh "sudo -S apt install docker.io -y"
-            sh "docker pull  komal921/docker-test ."
-            sh "docker run -itd komal921/docker-test"
+         sh "ansible-playbook sample-playbook.yml"
+
       }
      }
     }
